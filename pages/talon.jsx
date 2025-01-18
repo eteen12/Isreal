@@ -16,7 +16,7 @@ const navigation = [
 
 const people = [
   {
-    name: "Talon James Toye",
+    name: "The Toye Machine",
     title: "In-between opportunities",
     role: "Unemployed",
     email: "janecooper@example.com",
@@ -83,8 +83,7 @@ export default function Talon() {
               This IS<span className="italic">REAL</span>
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-              This is the <span className="text-xs">un</span> offical website of
-              Talon James Toye ( the Toye machine ( TTM ) ).
+              This is the <span className="text-xs">un</span> offical website of The Toye Machine
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a

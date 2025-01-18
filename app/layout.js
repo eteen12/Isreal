@@ -13,17 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Isreal | Talon James Toye",
+  title: "Isreal | The unofficial misspelled domain of Israel",
   description:
-    "The unoffical misspelled website domain of Israel and Talon James Toye",
+    "Welp. You're on the wrong website for sure.",
   author: "Ethan Breitkreutz",
   schema: {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Talon James Toye",
+    name: "The Toye Machine",
     url: "https://isreal.ca",
     description:
-      "The un-offical misspelled website domain of Israel and Talon James Toye",
+      "The un-offical misspelled website domain of Israel and The Toye Machine",
     sameAs: "https://www.instagram.com/talon_toye_/",
     image: "https://isreal.ca/talonJamesToye.webp",
     potentialAction: {
