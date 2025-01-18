@@ -255,3 +255,6 @@ body {
     transform: rotate(0);
   }
 }
+.blurry-text {
+  filter: blur(6px);
+}

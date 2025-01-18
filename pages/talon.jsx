@@ -21,7 +21,7 @@ const people = [
     role: "Unemployed",
     email: "janecooper@example.com",
     telephone: "+1-202-555-0170",
-    imageUrl: "/talonJamesToye.webp",
+    imageUrl: "/thetoyemachine.webp",
   },
 ];
 
@@ -32,7 +32,6 @@ export default function Talon() {
 
   const handleEmailClick = () => {
     setIsEmailOpen(true);
-    console.log("Fuck");
   };
 
   const handleEmailClose = () => {
@@ -41,7 +40,6 @@ export default function Talon() {
 
   const handlePhoneClick = () => {
     setIsPhoneOpen(true);
-    console.log("Fuck");
   };
 
   const handlePhoneClose = () => {
@@ -83,7 +81,9 @@ export default function Talon() {
               This IS<span className="italic">REAL</span>
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-              This is the <span className="text-xs">un</span> offical website of The Toye Machine
+              This is the <span className="text-xs ">un</span> offical website
+              of The
+              <span className="blurry-text"> Toye</span> Machine
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
@@ -116,7 +116,7 @@ export default function Talon() {
                 >
                   <div className="relative p-1 flex justify-between">
                     <Image
-                      alt="Talon James Toye staring seductively into the camera"
+                      alt="The Toye machine staring seductively into the camera"
                       src={"indeedLogo.png"}
                       className="object-contain size-24 shrink-0"
                       width={50}
@@ -134,14 +134,14 @@ export default function Talon() {
                     >
                       <div className="flex flex-1 flex-col p-8">
                         <Image
-                          alt="Talon James Toye staring seductively into the camera"
+                          alt="The Toye Machine staring seductively into the camera"
                           src={person.imageUrl}
                           className="mx-auto size-32 shrink-0 rounded-full"
                           width={32}
                           height={32}
                         />
                         <h3 className="mt-6 text-sm font-medium text-gray-900">
-                          {person.name}
+                          The <span className="blurry-text">Toye</span> Machine
                         </h3>
                         <dl className="mt-1 flex grow flex-col justify-between">
                           <dt className="sr-only">Title</dt>
@@ -250,10 +250,10 @@ export default function Talon() {
                       >
                         <circle r={1} cx={1} cy={1} />
                       </svg>
-                      <br /> I <span className="underline">will</span> be working the corner on Leon ave at 10am
-                      PST.
+                      <br /> I <span className="underline">will</span> be
+                      working the corner on Leon ave at 10am PST.
                       <a
-                        href="https://www.google.com/search?sca_esv=b083010cef7ef4d4&sxsrf=ADLYWIL6adrCSqJDLa6ChaiD5UGDBIgVaA:1737001620827&q=lynrick+rd+kelowna&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkW1DRbm01j6DCVS0r1sTxn7h_rt6mVhwDmwtd3hPZjM8yExIiDaiXmTUfySTHDiZj3V9mpz1bEofJZpCcuvq0qkaFEQHlcUV3IJl6mBPvCW0wVaREbeK939AyaGsn59rsLKNARtA5gItOKDJSE3SvsVFiBgnZdBcSgak6KqATi2g7PR4LLLAgRPhg-Gu_Cl4T-PpU4CQ&sa=X&ved=2ahUKEwibs9Wks_mKAxVzGDQIHTc6AKoQtKgLegQIEhAB&biw=1854&bih=927&dpr=1#vhid=lW_qwMxesisA2M&vssid=mosaic"
+                        href="https://www.google.com/search?q=leon+rd+kelowna&sca_esv=b083010cef7ef4d4&udm=2&biw=1854&bih=927&sxsrf=ADLYWIL5MQm250c1LHAWwrpss6WFufM29w%3A1737225535589&ei=P_WLZ53AI6D00PEPs__FqQg&ved=0ahUKEwjd28W39f-KAxUgOjQIHbN_MYUQ4dUDCBE&uact=5&oq=leon+rd+kelowna&gs_lp=EgNpbWciD2xlb24gcmQga2Vsb3duYTIEECMYJ0ioWFD7N1i0V3AFeACQAQCYAUagAa8IqgECMTi4AQPIAQD4AQGYAhegApYJqAIKwgIGEAAYBxgewgIHECMYJxjqAsICCBAAGIAEGLEDwgILEAAYgAQYsQMYgwHCAg4QABiABBixAxiDARiKBcICChAAGIAEGEMYigXCAg0QABiABBixAxhDGIoFwgIFEAAYgATCAgcQABiABBgKwgIKEAAYgAQYsQMYCsICBBAAGB7CAggQABgIGAoYHpgDA4gGAZIHAjIzoAfOWQ&sclient=img#vhid=SthZzXJLyQ2pUM&vssid=mosaic"
                         target="_blank"
                         rel="noreferrer"
                         className="text-nowrap flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ml-2"
