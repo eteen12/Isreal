@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://isreal.ca
+
+# Sitemaps
+Sitemap: https://isreal.ca/sitemap.xml

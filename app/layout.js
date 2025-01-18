@@ -52,6 +52,7 @@ export default function RootLayout({ children }) {
       />
       <meta name="apple-mobile-web-app-title" content="Isreal" />
       <link rel="manifest" href="/favicon/site.webmanifest" />
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

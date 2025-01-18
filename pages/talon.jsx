@@ -3,18 +3,6 @@ import { useEffect, useState } from "react";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { IoMdClose, IoIosNotifications } from "react-icons/io";
-
-const people = [
-  {
-    name: "Talon James Toye",
-    title: "In-between opportunities",
-    role: "Unemployed",
-    email: "janecooper@example.com",
-    telephone: "+1-202-555-0170",
-    imageUrl: "/talonJamesToye.webp",
-  },
-  // More people...
-];
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
@@ -26,7 +14,18 @@ const navigation = [
   { name: "Company", href: "#" },
 ];
 
-export default function Example() {
+const people = [
+  {
+    name: "Talon James Toye",
+    title: "In-between opportunities",
+    role: "Unemployed",
+    email: "janecooper@example.com",
+    telephone: "+1-202-555-0170",
+    imageUrl: "/talonJamesToye.webp",
+  },
+];
+
+export default function Talon() {
   const [isEmailOpen, setIsEmailOpen] = useState(false);
   const [isPhoneOpen, setIsPhoneOpen] = useState(false);
   const [isBellOpen, setIsBellOpen] = useState(false);
@@ -105,35 +104,16 @@ export default function Example() {
               </a>
             </div>
           </div>
-          <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
-            <svg
-              role="img"
-              viewBox="0 0 366 729"
-              className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
-            >
-              <title>App screenshot</title>
-              <defs>
-                <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
-                  <rect rx={36} width={316} height={684} />
-                </clipPath>
-              </defs>
-              <path
-                d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
-                fill="#4B5563"
-              />
-              <path
-                d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
-                fill="#343E4E"
-              />
-              <foreignObject
-                width={316}
-                height={684}
-                clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
-                transform="translate(24 24)"
-              >
+          <div className="mt-16 sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow overflow-hidden z-50 relative">
+            <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
+              <div className="w-[148px] h-[18px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute left-[-17px] top-[124px] rounded-s-lg"></div>
+              <div className="h-[46px] w-[3px] bg-gray-800 absolute left-[-17px] top-[178px] rounded-s-lg"></div>
+              <div className="h-[64px] w-[3px] bg-gray-800 absolute right-[-17px] top-[142px] rounded-e-lg"></div>
+              <div className="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800 relative">
                 <div
                   role="list"
-                  className="h-full w-full flex flex-col bg-white px-4"
+                  className="h-full w-full flex flex-col bg-white px-4 overflow-hidden relative z-20"
                 >
                   <div className="relative p-1 flex justify-between">
                     <Image
@@ -151,7 +131,7 @@ export default function Example() {
                   {people.map((person) => (
                     <div
                       key={person.email}
-                      className="flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow-sm border my-auto py-auto h-[60%]"
+                      className="flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow-sm border my-auto py-auto h-[60%] overflow-hidden"
                     >
                       <div className="flex flex-1 flex-col p-8">
                         <Image
@@ -209,7 +189,7 @@ export default function Example() {
                   ))}
                 </div>
                 <div
-                  className={`fixed bg-black inset-0 z-50 transition-all duration-500 ease-in-out ${
+                  className={`absolute inset-0 h-full w-full bg-black z-30 transition-all duration-500 ease-in-out ${
                     isEmailOpen
                       ? "translate-y-0 opacity-90"
                       : "translate-y-full opacity-20"
@@ -232,7 +212,7 @@ export default function Example() {
                 </div>
 
                 <div
-                  className={`fixed bg-black inset-0 z-50 transition-all duration-500 ease-in-out ${
+                  className={`absolute inset-0 bg-black z-30 transition-all duration-500 ease-in-out ${
                     isPhoneOpen
                       ? "translate-y-0 opacity-90"
                       : "translate-y-full opacity-20"
@@ -255,7 +235,7 @@ export default function Example() {
                 </div>
 
                 <div
-                  className={`fixed inset-0 z-50 transition-all duration-700 ease-in-out ${
+                  className={`absolute inset-0 z-50 transition-all duration-700 ease-in-out ${
                     isBellOpen ? "translate-y-0" : "-translate-y-full"
                   }`}
                 >
@@ -271,13 +251,13 @@ export default function Example() {
                       >
                         <circle r={1} cx={1} cy={1} />
                       </svg>
-                      <br /> I will be working the corner on Leon ave at 10am
+                      <br /> I <span className="underline">will</span> be working the corner on Leon ave at 10am
                       PST.
                       <a
                         href="https://www.google.com/search?sca_esv=b083010cef7ef4d4&sxsrf=ADLYWIL6adrCSqJDLa6ChaiD5UGDBIgVaA:1737001620827&q=lynrick+rd+kelowna&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkW1DRbm01j6DCVS0r1sTxn7h_rt6mVhwDmwtd3hPZjM8yExIiDaiXmTUfySTHDiZj3V9mpz1bEofJZpCcuvq0qkaFEQHlcUV3IJl6mBPvCW0wVaREbeK939AyaGsn59rsLKNARtA5gItOKDJSE3SvsVFiBgnZdBcSgak6KqATi2g7PR4LLLAgRPhg-Gu_Cl4T-PpU4CQ&sa=X&ved=2ahUKEwibs9Wks_mKAxVzGDQIHTc6AKoQtKgLegQIEhAB&biw=1854&bih=927&dpr=1#vhid=lW_qwMxesisA2M&vssid=mosaic"
                         target="_blank"
                         rel="noreferrer"
-                        className="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ml-2"
+                        className="text-nowrap flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ml-2"
                       >
                         Register now <span aria-hidden="true">&rarr;</span>
                       </a>
@@ -296,8 +276,16 @@ export default function Example() {
                     </div>
                   </div>
                 </div>
-              </foreignObject>
-            </svg>
+              </div>
+            </div>
+            <p className="text-gray-600 text-sm flex justify-center mt-5">
+              in &nbsp;
+              <span className="underline font-bold text-black italic">
+                {" "}
+                NO WAY
+              </span>
+              &nbsp; am I associated with Indeed.com
+            </p>
           </div>
         </div>
       </div>
